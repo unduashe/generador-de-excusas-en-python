@@ -3,7 +3,7 @@ import random
 excusas = {
     "formal": {
         "disculpa": ("Mis más sinceras disculpas, pero ", "Ruego me discuple, pero ", "Mis más sentidas disculpas, pero"),
-         "excusa": ("me ha resultado imposible conseguir xxxx, me comprometo a lograrlo lo antes posible", "mi perro se comió los deberes, estoy trabajando en ellos para que, con la mayor presteza posible, vuelva a tenerlos disponibles")
+         "excusa": ("me ha resultado imposible conseguir lo solicitado, me comprometo a lograrlo lo antes posible", "mi perro se comió los deberes, estoy trabajando en ello para que, con la mayor presteza posible, vuelva a tenerlos disponibles")
     },
     "neutro":{
         "disculpa": ("Hubo un imprevisto, ", "Ha surgido un contratimepo, "),
@@ -24,4 +24,6 @@ def generador_excusas(tipo_registro):
     resultado = ""
     resultado += excusas[tipo_registro]["disculpa"][random_num(tipo_registro, "disculpa")]
     resultado += excusas[tipo_registro]["excusa"][random_num(tipo_registro, "excusa")]
-    return print(resultado)
+    return resultado
+
+print(generador_excusas("formal"))
